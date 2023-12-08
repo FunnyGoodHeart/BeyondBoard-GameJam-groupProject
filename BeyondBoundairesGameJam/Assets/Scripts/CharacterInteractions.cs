@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class CharacterInteractions : MonoBehaviour
 {
     PlaceThingForE justE;
     ChatBoxandTextPlacement chatboxandtext;
-    bool ETextActive = false;
+    public bool eTextActive = false;
 
     private void Awake()
     {
@@ -25,7 +26,7 @@ public class CharacterInteractions : MonoBehaviour
         if(collision.gameObject.tag == "Friend")
         {
             justE.gameObject.SetActive(true);
-            ETextActive = true;
+            eTextActive = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -33,12 +34,12 @@ public class CharacterInteractions : MonoBehaviour
         if(collision.gameObject.tag == "Friend")
         {
             justE.gameObject.SetActive(false);
-            ETextActive = false;
+            eTextActive = false;
         }
     }
     void OnInteract()
     {
-        if (ETextActive)
+        if (eTextActive)
         {
             chatboxandtext.gameObject.SetActive(true);
         }

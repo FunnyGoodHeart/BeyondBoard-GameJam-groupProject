@@ -1,29 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using TMPro;
 
 public class LilyChat : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI chatBox;
-    [SerializeField] List<ChatSO>
-    
-    CharacterInteractions interact;
-    bool eInteract;
+    ChatBoxandTextPlacement chatboxandtext;
+    CharacterInteractions interactions;
+    bool activeChat = false;
 
     private void Start()
     {
-        interact = GetComponent<CharacterInteractions>();
-        eInteract = interact.eTextActive;
+        interactions = GetComponent<CharacterInteractions>();
     }
-    void OnInteract()
+    private void Update()
     {
-        if (eInteract)
+        bool chatActive = interactions.chatActive;
+        activeChat = chatActive;
+        Debug.Log(activeChat);
+        Debug.Log("AAAAA");
+        if (activeChat)
         {
+            Debug.Log("Hello");
+            chatboxandtext.gameObject.SetActive(true);
+            chatBox.text = "Hello";
         }
-    }
-    void OnClick()
-    {
     }
 }

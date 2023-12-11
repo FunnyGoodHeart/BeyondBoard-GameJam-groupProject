@@ -6,9 +6,11 @@ using TMPro;
 
 public class CharacterInteractions : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI chatBox;
     PlaceThingForE justE;
     ChatBoxandTextPlacement chatboxandtext;
-    public bool eTextActive = false;
+    bool eTextActive = false;
+    public bool chatActive = false;
 
     private void Awake()
     {
@@ -41,7 +43,9 @@ public class CharacterInteractions : MonoBehaviour
     {
         if (eTextActive)
         {
-            chatboxandtext.gameObject.SetActive(true);
+            chatActive = true;
+            //chatboxandtext.gameObject.SetActive(true);
+            //chatBox.text = "AAAAAAAAAA";
         }
     }
 }

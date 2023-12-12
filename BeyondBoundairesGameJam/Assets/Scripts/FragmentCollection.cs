@@ -5,7 +5,7 @@ using TMPro;
 
 public class FragmentCollection : MonoBehaviour
 {
-    [SerializeField] int fragmentCount = 0;
+    [SerializeField] public int fragmentCount = 0;
     [SerializeField] TextMeshProUGUI fragmentText;
 
 

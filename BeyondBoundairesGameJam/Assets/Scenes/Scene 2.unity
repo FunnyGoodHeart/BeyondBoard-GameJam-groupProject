@@ -208,8 +208,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135051969}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: 0.00000023704386, y: -0.02124892, z: 0.0000000050380637, w: 0.9997742}
+  m_LocalPosition: {x: 0.42449874, y: 0.0000047376657, z: -9.981948}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
+  m_LookAt: {fileID: 2146218597}
   m_Follow: {fileID: 2146218597}
   m_Lens:
     FieldOfView: 60
@@ -413,7 +413,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775270257}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.00000023704386, y: -0.02124892, z: 0.0000000050380637, w: 0.9997742}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -452,7 +452,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1125806662
 EdgeCollider2D:
@@ -563,11 +563,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.4580735, y: 10.619542}
-      - {x: -11.537644, y: 10.539324}
-      - {x: -12.039622, y: -10.733942}
-      - {x: 10.309123, y: -10.886632}
-      - {x: 10.112527, y: 10.43753}
+    - - {x: -0.3794111, y: 12.350117}
+      - {x: -11.537644, y: 12.269898}
+      - {x: -14.792808, y: -11.599229}
+      - {x: 13.06231, y: -11.673257}
+      - {x: 11.607114, y: 11.381479}
   m_UseDelaunayMesh: 0
 --- !u!4 &1341790875
 Transform:
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_ZDamping: 1
   m_AngularDampingMode: 0
   m_PitchDamping: 0
-  m_YawDamping: 0
+  m_YawDamping: 10
   m_RollDamping: 0
   m_AngularDamping: 0
 --- !u!4 &2146218597 stripped
@@ -670,7 +670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8027793634009437458, guid: 5af52c723a31b0c42977b000cd210c45, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8027793634009437458, guid: 5af52c723a31b0c42977b000cd210c45, type: 3}
       propertyPath: m_LocalPosition.x

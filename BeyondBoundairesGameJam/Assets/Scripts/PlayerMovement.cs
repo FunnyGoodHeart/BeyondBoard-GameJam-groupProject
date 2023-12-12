@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
        void Animate()
     {
         myAnimator.SetFloat("AnimMoveX", moveInput.x);
-        myAnimator.SetFloat("AnimMovey", moveInput.y);
+        myAnimator.SetFloat("AnimMoveY", moveInput.y);
         myAnimator.SetFloat("AnimMoveMagnitude", moveInput.magnitude);
     }
    

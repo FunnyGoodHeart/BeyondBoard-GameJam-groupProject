@@ -13,6 +13,25 @@ public class DialogueDisplay : MonoBehaviour
     public static event Action OnDialogueStarted;
     public static event Action OnDialogueEnded;
     bool skipLineTriggered;
+    [SerializeField] GameObject dialoguePanel;
+    public void ShowDialogue(DialogueDisplay dialogueDisplay, string dialogue, int startPosition, string name)
+    {
+        nameText.text = name + "...";
+        dialogueText.text = dialogue;
+        dialoguePanel.SetActive(true);
+    }
+    public void EndDialogue()
+    {
+        nameText.text = null;
+        dialogueText.text = null; ;
+        dialoguePanel.SetActive(false);
+    }
+
+    internal void ShowDialogue(DialogueDisplay dialogueDisplay, int startPosition, string friendName)
+    {
+        throw new NotImplementedException();
+    }
+
     private void Awake()
     {
         if (instance == null)

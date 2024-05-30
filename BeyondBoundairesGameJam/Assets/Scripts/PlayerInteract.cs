@@ -6,8 +6,10 @@ public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] float talkDistance = 2;
     bool inConversation;
+    private string dialogue;
+
     void Update()
-    {
+    { 
         if (Input.GetKeyDown(KeyCode.E))
         {
             Interact();
@@ -23,9 +25,9 @@ public class PlayerInteract : MonoBehaviour
         {
             if (Physics.Raycast(new Ray(transform.position, transform.forward), out RaycastHit hitInfo, talkDistance))
             {
-                if (hitInfo.collider.gameObject.TryGetComponent(out NPC npc))
+                if (hitInfo.collider.gameObject.TryGetComponent(out FriendConnect npc))
                 {
-                    DialogueDisplay.instance.StartDialogue(npc.dialogueAsset.dialogue, npc.StartPosition, npc.npcName);
+                    DialogueDisplay.instance.ShowDialogue(npc.DialogueDisplay(dialogue, name), npc.StartPosition, npc.friendName);
                 }
             }
         }
